@@ -708,7 +708,7 @@ def main():
     }
     print "Fired: " + strftime("%Y-%m-%d %H:%M:%S", gmtime())
     r = praw.Reddit(user_agent='NewYorkMetsflairbot')
-    r.login('NewYorkMetsflairbot', '022891')
+    r.login('NewYorkMetsflairbot', 'LGM')
     for msg in r.get_unread(limit=None):
         subj = str(msg.subject)
         print "Subject: " + subj
