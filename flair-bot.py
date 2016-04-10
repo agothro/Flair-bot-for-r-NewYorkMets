@@ -13,11 +13,11 @@ def main():
     r = praw.Reddit(user_agent='NewYorkMetsflairbot')
     r.login('NewYorkMetsflairbot', 'LGM')
     for msg in r.get_unread(limit=None):
-        subj = str(msg.subject)
+        subj = str(msg.body)
         print "Subject: " + subj
         print msg
         auth = str(msg.author)
-        body = str(msg.body)
+        body = str(msg.subject)
         print "Author: " + auth
         print "Message content: " + body
         sub = r.get_subreddit('testsubforxmarcs2')
